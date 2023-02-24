@@ -1,8 +1,9 @@
-import logo from './logo.svg';
 import './App.css';
-import Subscription from './components/Subscription';
+import Newsubscription from './Subscription/Newsubscription/Newsubscription';
+import Subscription from './Subscription/Subscription';
+import Container from './templates/Container';
 
-function App() {
+const App = () => {
   let subscriptions=[
     {
       id:1,
@@ -26,11 +27,12 @@ function App() {
 ]
 
   return (
-    <div>
+    <Container>
+    <Newsubscription/>
     <Subscription passedDate={subscriptions[0].date} passedTitle={subscriptions[0].title} passedAmount={subscriptions[0].amount}/>
     <Subscription passedDate={subscriptions[1].date} passedTitle={subscriptions[1].title} passedAmount={subscriptions[1].amount}/>
     <Subscription passedDate={subscriptions[2].date} passedTitle={subscriptions[2].title} passedAmount={subscriptions[2].amount}/>
-    </div>
+    </Container>
        
   );
 }

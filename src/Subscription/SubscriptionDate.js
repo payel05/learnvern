@@ -1,6 +1,6 @@
 import './subscriptiondate.css'
 
-function SubscriptionDate(props){
+const SubscriptionDate = (props) => {
     const month=props.passedDate.toLocaleString('default',{month:'long'})
     const day=props.passedDate.toLocaleString('default',{day:'2-digit'})
     const year=props.passedDate.getFullYear()
