@@ -25,6 +25,7 @@ const App = () => {
     },
 
 ]
+console.log(subscriptions);
 
   return (
     <Container>
